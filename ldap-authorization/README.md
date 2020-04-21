@@ -72,6 +72,8 @@ echo 42 | kafka-console-producer --broker-list localhost:9093 --topic adam --pro
 # Adam cannot produce to Bob's topic.
 echo 42 | kafka-console-producer  --broker-list localhost:9093 --topic bob --producer.config client.properties_adam
 
+kafka-console-consumer --bootstrap-server localhost:9093 --topic adam --consumer.config client.properties_adam
+
 kafka-topics --delete --bootstrap-server localhost:9092 --topic test
 
 confluent local stop kafka
