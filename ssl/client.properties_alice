@@ -1,0 +1,5 @@
+sasl.mechanism=PLAIN
+security.protocol=SASL_SSL
+sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username=alice password=alice-secret;
+ssl.truststore.location=/Users/davids/projects/kafka-auth/ssl/kafka.server.truststore.jks
+ssl.truststore.password=123456
